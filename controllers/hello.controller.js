@@ -4,13 +4,14 @@ const SplitCamelCase = (value) => {
 }
 
 exports.HelloStranger = (req, res) => {
-    res.status(200).send("Hello Stranger");
+    if(req.query.name){
+        res.status(200).send(`Hello ${ SplitCamelCase(req.query.name) }`);
+    }
+    else{
+        res.status(200).send("Hello Stranger");
+    }
 }
 
 exports.HelloWithParamsName = (req, res) => {
-    res.status(200).send(`Hello ${ SplitCamelCase(req.params.name) }`)
-}
-
-exports.HelloWithQueryName = (req, res) => {
-
+    res.status(200).send(`Hello ${ SplitCamelCase(req.params.name) }`);
 }
