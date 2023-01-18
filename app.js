@@ -4,6 +4,7 @@ const morgan = require("morgan");
 // import route module
 const helloRoute  = require("./route/hello.route");
 const authorRoute = require("./route/author.route");
+const homeRoute   = require("./route/home.route");
 
 // init app
 const app = express();
@@ -15,5 +16,6 @@ app.use(morgan(':remote-addr - - [:date[iso]] ":method :url" :status - - :respon
 // routes
 app.use("/hello/", helloRoute);
 app.use("/author/", authorRoute);
+app.use("/", homeRoute);
 
 module.exports = app;
