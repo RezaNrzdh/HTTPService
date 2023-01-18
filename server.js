@@ -6,4 +6,4 @@ dotenv.config({ path: './config.env' });
 const PORT = process.env.PORT;
 
 // Listening
-app.listen(PORT, console.log("Waiting for request..."));
+app.listen(PORT, console.log(`HttpService listening on port ${PORT}`));
