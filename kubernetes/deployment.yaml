@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: docker.io/rezanrzdh/httpservice
+          image: rezanrzdh/httpservice
           ports:
             - name: web
               containerPort: 8080
